@@ -1,10 +1,18 @@
 const cards = document.querySelectorAll(".card");
-// console.log(cards); 
-cards.forEach(function(card){
-    const button = document.querySelector(".card-btn");
-    button.addEventListener("click",()=>{
-        card.classList.toggle("hidden-card");
-    })
-    
 
-})
+cards.forEach((card) => {
+  const button = card.querySelector(".card-btn");
+  const paragraph = card.querySelector("p");
+
+  button.addEventListener("click", () => {
+    paragraph.classList.toggle("hidden-text");
+    card.classList.toggle("hidden-card");
+    card.classList.toggle("open-card");
+
+    if (button.textContent.trim() === "+") {
+      button.textContent = "−";
+    } else {
+      button.textContent = "+";
+    }
+  });
+});

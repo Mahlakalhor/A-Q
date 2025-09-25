@@ -7,7 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-lime-600: oklch(64.8% 0.2 131.684);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -173,6 +173,9 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
   .flex {
     display: flex;
   }
@@ -206,6 +209,15 @@
   .justify-center {
     justify-content: center;
   }
+  .justify-start {
+    justify-content: flex-start;
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
@@ -223,8 +235,8 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
-  .border-lime-600 {
-    border-color: var(--color-lime-600);
+  .border-\[\#9ACD32\] {
+    border-color: #9ACD32;
   }
   .bg-\[\#ebebeb\] {
     background-color: #ebebeb;
@@ -235,8 +247,17 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
+  }
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -246,11 +267,14 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-\[\#9ACD32\] {
+    color: #9ACD32;
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
   .text-gray-700 {
     color: var(--color-gray-700);
-  }
-  .text-lime-600 {
-    color: var(--color-lime-600);
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
@@ -258,7 +282,14 @@
   }
 }
 .hidden-card {
-  height: 100px;
+  height: 120px;
+  overflow: hidden;
+}
+.open-card {
+  height: 208px;
+}
+.hidden-text {
+  display: none;
 }
 @property --tw-border-style {
   syntax: "*";

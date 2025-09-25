@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
-.hidden-card{
-    height: 100px;
+.hidden-card {
+  height: 120px;
+  overflow: hidden;
+}
 
-
-
+.open-card {
+  height: 208px;
+}
+.hidden-text {
+  display: none;  
 }
